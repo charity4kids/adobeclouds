@@ -1,3 +1,5 @@
+alert("process.js loaded");
+
 function log(message) {
     console.log(message);
 
