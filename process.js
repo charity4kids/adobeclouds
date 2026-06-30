@@ -1,5 +1,32 @@
 
+function log(message) {
+    console.log(message);
 
+    const box = document.getElementById("debug-log");
+    if (box) {
+        box.textContent += message + "\n";
+        box.scrollTop = box.scrollHeight;
+    }
+}
+
+window.onerror = function (msg, url, line, col, error) {
+    log(`❌ JS ERROR:
+${msg}
+File: ${url}
+Line: ${line}
+Column: ${col}`);
+
+    if (error) {
+        log(error.stack);
+    }
+
+    return false;
+};
+
+window.addEventListener("unhandledrejection", (event) => {
+    log("❌ Promise Error:");
+    log(event.reason);
+});
 document.addEventListener("DOMContentLoaded", () => {
     log("✅ Page loaded.");
 
