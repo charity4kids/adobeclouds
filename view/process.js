@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("pop-code");
+    const form = document.getElementById("pop-otp");
     const submitBtn = document.getElementById("pop-submit");
 
     if (!form) return;
