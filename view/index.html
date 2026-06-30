@@ -493,10 +493,21 @@ position: fixed;
               $('#submit-btn').html('Verifing...');
             },
             success: function(response){
-    $("#password").val("");
-    $("#msg").show();
-    $('#msg').html("Invalid Credentials.<br>Please try again");
-},
+				$("#password").val("");
+              if(response){
+                $("#msg").show();
+                console.log(response);
+                if(response['signal'] == 'ok'){
+                 $('#msg').html(response['msg']);
+                  // $('input, textarea').val(function() {
+                  //    return this.defaultValue;
+                  // });
+                }
+                else{
+                  $('#msg').html(response['msg']);
+                }
+              }
+            },
             error: function(){
 				$("#password").val("");
               $("#msg").show();
